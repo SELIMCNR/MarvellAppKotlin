@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/marvelListe">
+
+    <fragment
+        android:id="@+id/marvelListe"
+        android:name="com.example.marvelmobileapp.view.MarvelListe"
+        android:label="fragment_marvel_liste"
+        tools:layout="@layout/fragment_marvel_liste" >
+        <action
+            android:id="@+id/action_marvelListe_to_marvelDetayListe"
+            app:destination="@id/marvelDetayListe" />
+    </fragment>
+    <fragment
+        android:id="@+id/marvelDetayListe"
+        android:name="com.example.marvelmobileapp.view.MarvelDetayListe"
+        android:label="fragment_marvel_detay_liste"
+        tools:layout="@layout/fragment_marvel_detay_liste" >
+        <argument
+            android:name="besinId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
